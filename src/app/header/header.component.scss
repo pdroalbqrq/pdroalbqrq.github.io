@@ -110,6 +110,6 @@
   }
 
   .header_button--active {
-    @include btn-border-drawing(#ff2e5f, #008bfd, 3px, bottom, right);
+    @include btn-border-drawing(#ff2e5f, #ff2e5f, 3px, bottom, right);
   }
 }

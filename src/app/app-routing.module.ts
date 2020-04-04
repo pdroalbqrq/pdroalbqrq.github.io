@@ -12,15 +12,17 @@ const routes: Routes = [
       {
         path: "inicio",
         component: HomeComponent,
+        data: { animation: "isLeft" },
       },
-      {
-        path: "",
-        redirectTo: "inicio",
-        pathMatch: "full",
-      },
+      // {
+      //   path: "",
+      //   redirectTo: "inicio",
+      //   pathMatch: "full",
+      // },
       {
         path: "sobre-mim",
         component: AboutComponent,
+        data: { animation: "isRight" },
       },
     ],
   },

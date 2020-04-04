@@ -6,14 +6,18 @@ import { slideInAnimation } from "./animations";
   selector: "app-app-main",
   template: `
     <app-header></app-header>
-    <div
-      [@routeAnimations]="outlet.isActivated ? outlet.activatedRoute : ''"
-      id="main-outlet"
-    >
+    <main [@routeAnimations]="prepareRoute(outlet)" class="main-outlet">
       <router-outlet #outlet="outlet"></router-outlet>
-    </div>
+    </main>
   `,
-  styles: ["#main-outlet { height: calc(100% - 60px); width: 100%;}"],
   animations: [slideInAnimation],
 })
-export class AppLayoutComponent {}
+export class AppLayoutComponent {
+  prepareRoute(outlet: RouterOutlet) {
+    return (
+      outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData["animation"]
+    );
+  }
+}
