@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { slideInAnimation } from "./animations";
+import { slide } from "./animations";
 
 @Component({
   selector: "app-app-main",
@@ -10,7 +10,7 @@ import { slideInAnimation } from "./animations";
       <router-outlet #outlet="outlet"></router-outlet>
     </main>
   `,
-  animations: [slideInAnimation],
+  animations: [slide],
 })
 export class AppLayoutComponent {
   prepareRoute(outlet: RouterOutlet) {

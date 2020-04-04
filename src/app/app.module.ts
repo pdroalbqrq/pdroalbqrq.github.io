@@ -9,6 +9,9 @@ import { HeaderComponent } from "./header/header.component";
 import { HomeComponent } from "./home/home.component";
 import { AppLayoutComponent } from "./layout.component";
 import { AboutComponent } from './about/about.component';
+import { SkillsComponent } from './skills/skills.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     AppLayoutComponent,
     AboutComponent,
+    SkillsComponent,
+    PortfolioComponent,
+    TeamComponent,
   ],
   imports: [
     BrowserModule,
