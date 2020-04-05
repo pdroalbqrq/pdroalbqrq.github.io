@@ -35,10 +35,10 @@ function slideTest() {
     group([
       query(
         ":leave",
-        [animate("300ms ease-out", style({ left: "100%" }))],
+        [animate("600ms ease-out", style({ left: "100%" }))],
         optional
       ),
-      query(":enter", [animate("300ms ease-out", style({ left: "0%" }))]),
+      query(":enter", [animate("600ms ease-out", style({ left: "0%" }))]),
     ]),
     query(":enter", animateChild()),
   ];
