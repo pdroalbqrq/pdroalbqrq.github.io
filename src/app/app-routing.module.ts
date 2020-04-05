@@ -20,25 +20,27 @@ const routes: Routes = [
       {
         path: "inicio",
         component: HomeComponent,
-        data: { animation: "isLeft" },
+        data: { animation: "HomePage" },
       },
       {
         path: "sobre-mim",
         component: AboutComponent,
-        data: { animation: "isRight" },
+        data: { animation: "AboutPage" },
       },
       {
         path: "habilidades",
         component: SkillsComponent,
+        data: { animation: "SkillPage" },
       },
       {
         path: "portfolio",
         component: PortfolioComponent,
-        data: { animation: "isRight" },
+        data: { animation: "PortfolioPage" },
       },
       {
         path: "equipe",
         component: TeamComponent,
+        data: { animation: "TeamPage" },
       },
     ],
   },

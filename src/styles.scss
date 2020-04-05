@@ -15,5 +15,6 @@ main {
   height: calc(100% - 60px);
   width: 100%;
   position: relative;
-  overflow: hidden;
+  z-index: 1;
+  overflow-x: hidden;
 }

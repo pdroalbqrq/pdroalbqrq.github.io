@@ -4,14 +4,13 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MaterialModule } from "./shared/material.module";
 import { HeaderComponent } from "./header/header.component";
 import { HomeComponent } from "./home/home.component";
 import { AppLayoutComponent } from "./layout.component";
-import { AboutComponent } from './about/about.component';
-import { SkillsComponent } from './skills/skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { TeamComponent } from './team/team.component';
+import { AboutComponent } from "./about/about.component";
+import { SkillsComponent } from "./skills/skills.component";
+import { PortfolioComponent } from "./portfolio/portfolio.component";
+import { TeamComponent } from "./team/team.component";
 
 @NgModule({
   declarations: [
@@ -24,12 +23,7 @@ import { TeamComponent } from './team/team.component';
     PortfolioComponent,
     TeamComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
