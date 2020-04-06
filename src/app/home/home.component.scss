@@ -1,6 +1,5 @@
 .background {
-  background: url(https://images.unsplash.com/photo-1558346547-4439467bd1d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
-    no-repeat center center fixed;
+  background: url() no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,5 +8,27 @@
     background: rgba(0, 0, 0, 0.712);
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .title {
+    color: white;
+    font-size: 6em;
+    font-weight: bold;
+  }
+  #subtitle {
+    color: white;
+    font-size: 2em;
+    padding-left: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 }
