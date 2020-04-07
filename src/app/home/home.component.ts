@@ -10,9 +10,9 @@ import { Subscriber } from "rxjs";
 })
 export class HomeComponent implements OnInit, OnDestroy {
   defaultImage =
-    "https://images.unsplash.com/photo-1558346547-4439467bd1d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=50";
+    "https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=450&w=960";
   image =
-    "https://images.unsplash.com/photo-1558346547-4439467bd1d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=100";
+    "https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
 
   typeWriter;
   constructor() {}
