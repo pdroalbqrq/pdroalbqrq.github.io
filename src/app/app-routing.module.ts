@@ -20,36 +20,26 @@ const routes: Routes = [
       {
         path: "inicio",
         component: HomeComponent,
-        // data: { animation: "HomePage" },
-
         data: { routeIdx: 0 },
       },
       {
         path: "sobre-mim",
         component: AboutComponent,
-        // data: { animation: "AboutPage" },
-
         data: { routeIdx: 1 },
       },
       {
         path: "habilidades",
         component: SkillsComponent,
-        // data: { animation: "SkillPage" },
-
         data: { routeIdx: 2 },
       },
       {
         path: "portfolio",
         component: PortfolioComponent,
-        // data: { animation: "PortfolioPage" },
-
         data: { routeIdx: 3 },
       },
       {
         path: "equipe",
         component: TeamComponent,
-        // data: { animation: "TeamPage" },
-
         data: { routeIdx: 4 },
       },
     ],

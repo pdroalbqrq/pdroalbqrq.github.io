@@ -46,8 +46,8 @@ import {
 // }
 
 export const slide = trigger("routeAnimations", [
-  transition(":increment", slideTo("right")),
-  transition(":decrement", slideTo("left")),
+  transition(":increment", slideTo("bottom")),
+  transition(":decrement", slideTo("top")),
 ]);
 
 function slideTo(direction: string) {
@@ -60,7 +60,7 @@ function slideTo(direction: string) {
       [
         style({
           position: "absolute",
-          top: 0,
+          left: 0,
           [direction]: 0,
           width: "100%",
           height: "100%",

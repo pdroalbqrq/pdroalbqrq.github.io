@@ -11,7 +11,7 @@ import { AboutComponent } from "./about/about.component";
 import { SkillsComponent } from "./skills/skills.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { TeamComponent } from "./team/team.component";
-import { LazyLoadImageModule, scrollPreset } from "ng-lazyload-image";
+import { LazyLoadImageModule } from "ng-lazyload-image";
 
 @NgModule({
   declarations: [
@@ -28,9 +28,7 @@ import { LazyLoadImageModule, scrollPreset } from "ng-lazyload-image";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LazyLoadImageModule.forRoot({
-      preset: scrollPreset, // <-- tell LazyLoadImage that you want to use scrollPreset
-    }),
+    LazyLoadImageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

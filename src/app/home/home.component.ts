@@ -1,7 +1,10 @@
-import { Component, OnInit, ElementRef, OnDestroy } from "@angular/core";
-import { Observable } from "rxjs/internal/Observable";
-import Typewriter from "typewriter-effect/dist/core";
-import { Subscriber } from "rxjs";
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  OnDestroy,
+  HostListener,
+} from "@angular/core";
 
 @Component({
   selector: "app-home",
@@ -10,25 +13,18 @@ import { Subscriber } from "rxjs";
 })
 export class HomeComponent implements OnInit, OnDestroy {
   defaultImage =
-    "https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=450&w=960";
+    "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=760";
   image =
-    "https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
+    "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=1050&w=1560";
 
-  typeWriter;
   constructor() {}
 
-  ngOnInit(): void {
-    this.typeWriter = new Typewriter("#subtitle", {
-      strings: [
-        "Desenvolvedor<strong><span style='color: #ff2e5f;'> Front-End</span></strong>",
-        "Desenvolvedor<strong><span style='color: #008bfd;'> Back-End</span></strong>",
-        "Dependente de<strong><span style='color: #611a00;'> Cafeína</span></strong>",
-      ],
-      loop: true,
-      delay: 75,
-      autoStart: true,
-    });
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    console.log(window.scrollY);
   }
+
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {}
 }
