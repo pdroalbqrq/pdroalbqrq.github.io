@@ -23,7 +23,7 @@
       padding-bottom: 22px;
       font-weight: 600;
       font-size: 1.6rem;
-      color: #666;
+      color: var(--font-color);
     }
     .list {
       display: flex;
@@ -37,7 +37,7 @@
     }
     .list-title {
       opacity: 0.8;
-      color: #666;
+      color: var(--font-color);
       span {
         opacity: 1;
         color: rgb(53, 53, 53);
@@ -71,7 +71,7 @@
   .my-skills__title {
     font-size: 1.6rem;
     font-weight: 600;
-    color: #666;
+    color: var(--font-color);
   }
   .my-skills__graphs {
     display: flex;
@@ -85,6 +85,9 @@
       flex: 0 0 calc(25% - 40px);
       margin: 40px 20px;
     }
+  }
+  .experience__divisor {
+    display: flex;
   }
 }
 

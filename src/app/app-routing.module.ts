@@ -24,7 +24,8 @@ const routes: Routes = [
       },
       {
         path: "sobre-mim",
-        component: AboutComponent,
+        loadChildren: () =>
+          import("./about/about.module").then((m) => m.AboutModule),
         data: { routeIdx: 1, state: "sobre-mim" },
       },
       {

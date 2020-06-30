@@ -24,9 +24,9 @@
     line-height: 1.5;
     z-index: 2;
     position: relative;
-    color: #666;
+    color: var(--font-color);
     span {
-      color: #c9003c;
+      color: var(--primary-color);
     }
   }
   .title-bg {

@@ -48,10 +48,21 @@
         <h1 class="my-skills__title">
           EXPERIÊNCIA E EDUCAÇÃO
         </h1>
-        <div class="my-skills__graphs">
-          <!-- <div *ngFor="let skill of skills">
-          <app-graph [skill]="skill"></app-graph>
-        </div> -->
+        <div class="experience__divisor">
+          <div>
+            <app-experience
+              *ngFor="let eJ of experienceJob"
+              [isJob]="true"
+              [experience]="eJ"
+            ></app-experience>
+          </div>
+          <div>
+            <app-experience
+              *ngFor="let eJ of experienceStudy"
+              [isJob]="false"
+              [experience]="eJ"
+            ></app-experience>
+          </div>
         </div>
       </section>
     </div>

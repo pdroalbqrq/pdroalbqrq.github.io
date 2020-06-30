@@ -112,6 +112,37 @@ export class AboutComponent implements OnInit {
       icon: "fab fa-react",
     },
   ];
+
+  experienceJob = [
+    {
+      date: "2019 - atualmente",
+      job: "web developer",
+      company: "AVANADE",
+      description: "Desenvolvedor web front-end com Angular 8/9",
+    },
+    {
+      date: "2019 - 2019",
+      job: "web developer",
+      company: "Berlim Digital",
+      description:
+        "Desenvolvedor web (front-end/back-end) com Javascript Vanilla, PhP/WordPress",
+    },
+    {
+      date: "2017 - 2019",
+      job: "Front End developer",
+      company: "Nomad Work",
+      description: "Desenvolvedor web front-end com Angular 6",
+    },
+  ];
+  experienceStudy = [
+    {
+      date: "2017 - 2019",
+      job: "ADS",
+      company: "UNIBRATEC",
+      description:
+        "O curso de Análise e Desenvolvimento de Sistemas forma profissionais capazes de desenvolver, analisar, projetar, implementar e atualizar sistemas de informação para diversos setores de atividades.",
+    },
+  ];
   constructor() {}
 
   ngOnInit(): void {}

@@ -20,8 +20,10 @@ body {
 }
 
 .graph__spinner.mat-progress-spinner {
-  stroke: #c9003c;
+  circle:hover {
+    stroke: var(--primary-color-hover);
+  }
   circle {
-    stroke: #c9003c;
+    stroke: var(--primary-color);
   }
 }

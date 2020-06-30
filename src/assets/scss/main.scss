@@ -127,6 +127,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+:root {
+  --primary-color: #c9003c;
+  --primary-color-hover: #97002d;
+  --secondary-color: #fff;
+  --font-color: #666;
+}
+
 .ps:hover > .ps__rail-x,
 .ps:hover > .ps__rail-y,
 .ps--focus > .ps__rail-x,

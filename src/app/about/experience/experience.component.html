@@ -1,0 +1,22 @@
+<div class="experience">
+  <div class="experience__icon">
+    <i *ngIf="isJob; else study" class="fas fa-laptop"></i>
+    <ng-template #study>
+      <i class="fas fa-graduation-cap"></i>
+    </ng-template>
+  </div>
+  <div class="experience__text-block">
+    <div class="date">
+      {{ experience.date }}
+    </div>
+    <div class="experience__job">
+      {{ experience.job }} -
+      <span class="experiente__company"> {{ experience.company }}</span>
+    </div>
+    <div class="experience__description">
+      <p>
+        {{ experience.description }}
+      </p>
+    </div>
+  </div>
+</div>

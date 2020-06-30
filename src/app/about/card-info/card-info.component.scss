@@ -3,7 +3,7 @@
   padding: 20px 40px 25px 40px;
   background: white;
   .card-box__value {
-    color: #c9003c;
+    color: var(--primary-color);
     margin: 0;
     font-size: 50px;
     font-weight: 800;
@@ -23,7 +23,7 @@
     padding-left: 45px;
     font-weight: 400;
     max-width: 100px;
-    color: #666;
+    color: var(--font-color);
     line-height: 1.6;
     &::before {
       content: "";
@@ -32,7 +32,7 @@
       top: 13px;
       width: 30px;
       height: 1px;
-      background: #777;
+      background: var(--font-color);
     }
   }
 }

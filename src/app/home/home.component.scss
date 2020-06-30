@@ -4,8 +4,8 @@
   align-items: center;
   background: linear-gradient(
     75deg,
-    #c9003c 24%,
-    rgba(255, 255, 255, 1) 24.05%
+    var(--primary-color) 24%,
+    var(--secondary-color) 24.05%
   );
   .my-image {
     background-image: url(https://i.imgur.com/O9MZfwg.jpg);
@@ -33,20 +33,20 @@
     justify-content: center;
 
     h6 {
-      color: #777;
+      color: var(--primary-color);
     }
     p {
       margin: 10px 0 23px;
       font-size: 16px;
       line-height: 32px;
-      color: #666;
+      color: var(--font-color);
     }
     .my-name {
       font-family: "Poppins", sans-serif;
       font-weight: 700;
-      color: #c9003c;
+      color: var(--primary-color);
       span {
-        color: #666;
+        color: var(--font-color);
       }
     }
   }
@@ -103,7 +103,7 @@
       position: relative;
       &:hover {
         svg {
-          fill: #c9003c;
+          fill: var(--primary-color);
           transform: scale(1.2);
         }
         span {
@@ -113,7 +113,7 @@
       }
       svg {
         margin: 10px;
-        fill: #666;
+        fill: var(--font-color);
         transition: 0.2s;
       }
 
@@ -125,9 +125,9 @@
         font-size: 0.8rem;
         font-weight: 500;
         white-space: nowrap;
-        color: #fff;
+        color: var(--secondary-color);
         border-radius: 50px;
-        background-color: #c9003c;
+        background-color: var(--primary-color);
         box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
           0 5px 15px rgba(0, 0, 0, 0.07);
 
@@ -147,7 +147,7 @@
   padding: 0px 40px;
   border: 0px;
   border-radius: 10px;
-  background: #c9003c;
+  background: var(--primary-color);
   cursor: pointer;
   outline: none;
   span {
@@ -155,7 +155,7 @@
     font-weight: 500;
     line-height: 46px;
     letter-spacing: 0.5px;
-    color: white;
+    color: var(--secondary-color);
   }
 }
 
