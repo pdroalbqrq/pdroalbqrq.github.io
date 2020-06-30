@@ -17,9 +17,6 @@ import { homeTransition } from "../show-animation";
   },
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  defaultImage = "https://i.imgur.com/O9MZfwg.jpg";
-  image = "https://i.imgur.com/O9MZfwg.jpg";
-
   constructor() {}
 
   @HostListener("window:scroll", [])

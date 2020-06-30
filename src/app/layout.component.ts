@@ -6,9 +6,12 @@ import { slide } from "./router-animations";
   selector: "app-app-main",
   template: `
     <app-header></app-header>
-    <main [@routeAnimations]="prepareRoute(outlet)" class="main-outlet">
+    <perfect-scrollbar
+      [@routeAnimations]="prepareRoute(outlet)"
+      class="main-outlet"
+    >
       <router-outlet #outlet="outlet"></router-outlet>
-    </main>
+    </perfect-scrollbar>
   `,
   animations: [slide],
 })

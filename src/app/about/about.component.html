@@ -1,55 +1,59 @@
 <div class="background">
   <div class="container">
-    <section class="title-session">
+    <section class="title-session block">
       <h1 class="title">SOBRE <span class="title">MIM</span></h1>
       <span class="title-bg">CURRÍCULO</span>
     </section>
+    <div class="block">
+      <section class="personal-info">
+        <div class="personal-info__left">
+          <h2 class="personal-info__title">INFORMAÇÕES PESSOAIS</h2>
+          <div class="list">
+            <ul class="personal-info__list">
+              <li *ngFor="let columnOne of aboutMeFirst">
+                <p class="list-title">
+                  {{ columnOne.key }} : <span>{{ columnOne.value }}</span>
+                </p>
+              </li>
+            </ul>
 
-    <section class="personal-info block">
-      <div class="personal-info__left">
-        <h2 class="personal-info__title">INFORMAÇÕES PESSOAIS</h2>
-        <div class="list">
-          <ul class="personal-info__list">
-            <li>
-              <p class="list-title">Nome : <span>Pedro</span></p>
-            </li>
-            <li>
-              <p class="list-title">Sobrenome : <span>Albuquerque</span></p>
-            </li>
-            <li>
-              <p class="list-title">
-                E-mail : <span>pdroalbqrq@gmail.com</span>
-              </p>
-            </li>
-            <li>
-              <p class="list-title">Idade : <span>22 anos</span></p>
-            </li>
-            <li>
-              <p class="list-title">Nacionalidade : <span>brasileiro</span></p>
-            </li>
-          </ul>
-          <ul class="personal-info__list">
-            <li>
-              <p class="list-title">Freelance : <span>Disponível</span></p>
-            </li>
-            <li>
-              <p class="list-title">Endereço : <span>Olinda</span></p>
-            </li>
-            <li>
-              <p class="list-title">Telefone : <span>+55 9 9880 2269</span></p>
-            </li>
-            <li>
-              <p class="list-title">Idiomas : <span>Português, Inglês</span></p>
-            </li>
-          </ul>
+            <ul class="personal-info__list">
+              <li *ngFor="let columnTwo of aboutMeSecond">
+                <p class="list-title">
+                  {{ columnTwo.key }} : <span>{{ columnTwo.value }}</span>
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="personal-info__right">
-        <div *ngFor="let info of infos">
-          <app-card-info [infos]="info"></app-card-info>
+        <div class="personal-info__right">
+          <div *ngFor="let info of infos">
+            <app-card-info [infos]="info"></app-card-info>
+          </div>
         </div>
-      </div>
-    </section>
-    <hr class="separator block" />
+      </section>
+      <hr class="separator" />
+      <section class="my-skills">
+        <h1 class="my-skills__title">
+          MINHAS HABILIDADES
+        </h1>
+        <div class="my-skills__graphs">
+          <div *ngFor="let skill of skills">
+            <app-graph [skill]="skill"></app-graph>
+          </div>
+        </div>
+      </section>
+      <hr class="separator" />
+      <section class="my-skills">
+        <h1 class="my-skills__title">
+          EXPERIÊNCIA E EDUCAÇÃO
+        </h1>
+        <div class="my-skills__graphs">
+          <!-- <div *ngFor="let skill of skills">
+          <app-graph [skill]="skill"></app-graph>
+        </div> -->
+        </div>
+      </section>
+    </div>
   </div>
 </div>

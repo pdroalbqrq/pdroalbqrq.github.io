@@ -1,0 +1,25 @@
+<!-- <div class="set-size charts-container">
+  <div class="pie-wrapper progress-{{ progresso }}">
+    <span class="label">{{ progresso }}<span class="smaller">%</span></span>
+    <div class="pie">
+      <div class="left-side half-circle"></div>
+      <div class="right-side half-circle"></div>
+    </div>
+  </div>
+</div> -->
+<div class="graph">
+  <mat-progress-spinner
+    class="graph__spinner"
+    [color]="'primary'"
+    [diameter]="150"
+    [mode]="'determinate'"
+    [value]="skill.value"
+  >
+  </mat-progress-spinner>
+  <span class="graph__span label"
+    >{{ skill.value }}<span class="smaller">%</span></span
+  >
+  <span class="graph__title">
+    {{ skill.name }}
+  </span>
+</div>

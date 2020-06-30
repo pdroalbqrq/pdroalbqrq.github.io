@@ -1,25 +1,24 @@
 .background {
-  height: 100%;
-  background: linear-gradient(
-    110deg,
-    rgba(255, 255, 255, 1) 78%,
-    #c9003c 78.05%
-  );
+  // background: linear-gradient(
+  //   110deg,
+  //   rgba(255, 255, 255, 1) 78%,
+  //   #c9003c 78.05%
+  // );
 }
 
 .container {
-  max-width: 1280px;
-  width: 100%;
+  max-width: 1140px;
+  width: 90%;
 }
 
 .personal-info {
   margin-top: 100px;
   display: flex;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   .personal-info__left {
     min-width: 600px;
-    // height: 500px;
-    // background: rgb(103, 103, 219);
     .personal-info__title {
       padding-bottom: 22px;
       font-weight: 600;
@@ -50,7 +49,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // width: 600px;
     & > div {
       // flex: 0 0 50%;
       max-width: 50%;
@@ -66,4 +64,32 @@
 .separator {
   margin: 70px auto 55px;
   max-width: 40%;
+}
+
+.my-skills {
+  text-align: center;
+  .my-skills__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #666;
+  }
+  .my-skills__graphs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 calc(25% - 40px);
+      margin: 40px 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .personal-info {
+    flex-wrap: nowrap;
+  }
 }
