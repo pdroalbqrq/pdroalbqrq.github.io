@@ -20,27 +20,27 @@ const routes: Routes = [
       {
         path: "inicio",
         component: HomeComponent,
-        data: { routeIdx: 0 },
+        data: { routeIdx: 0, state: "inicio" },
       },
       {
         path: "sobre-mim",
         component: AboutComponent,
-        data: { routeIdx: 1 },
+        data: { routeIdx: 1, state: "sobre-mim" },
       },
       {
         path: "habilidades",
         component: SkillsComponent,
-        data: { routeIdx: 2 },
+        data: { routeIdx: 2, state: "habilidades" },
       },
       {
         path: "portfolio",
         component: PortfolioComponent,
-        data: { routeIdx: 3 },
+        data: { routeIdx: 3, state: "portfolio" },
       },
       {
         path: "equipe",
         component: TeamComponent,
-        data: { routeIdx: 4 },
+        data: { routeIdx: 4, state: "equipe" },
       },
     ],
   },

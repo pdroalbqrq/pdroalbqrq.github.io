@@ -12,6 +12,7 @@ import { SkillsComponent } from "./skills/skills.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { TeamComponent } from "./team/team.component";
 import { LazyLoadImageModule } from "ng-lazyload-image";
+import { CardInfoComponent } from './about/card-info/card-info.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { LazyLoadImageModule } from "ng-lazyload-image";
     SkillsComponent,
     PortfolioComponent,
     TeamComponent,
+    CardInfoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,5 @@
-<div [lazyLoad]="image" [defaultImage]="defaultImage" class="background">
-  <div class="home">
-    <h1 class="title">
-      PEDRO CHIAPPETTA
-    </h1>
-    <div class="subtitle">
-      DESENVOLVEDOR <span> FRONT-END</span> && <span>BACK-END</span>
-    </div>
+<div class="background">
+  <div [defaultImage]="defaultImage" [lazyLoad]="image" class="my-image block">
     <div class="home__social-medias">
       <div>
         <svg
@@ -93,4 +87,31 @@
       </div>
     </div>
   </div>
+  <div class="text block">
+    <div>
+      <h6>
+        OLÁ !
+      </h6>
+      <h1 class="my-name"><span>SOU</span> PEDRO ALBUQUERQUE</h1>
+      <p>
+        Sou desenvolvedor front-end focado em design clean e experiência do
+        usuário, sempre me atualizando com as melhores tecnologias do mercado e
+        focado em entregar um serviço com a melhor qualidade.
+      </p>
+      <button class="main-button" routerLink="/sobre-mim">
+        <span>
+          MAIS SOBRE MIM
+        </span>
+      </button>
+    </div>
+  </div>
+  <!-- <div class="home">
+    <h1 class="title">
+      PEDRO CHIAPPETTA
+    </h1>
+    <div class="subtitle">
+      DESENVOLVEDOR <span> FRONT-END</span> && <span>BACK-END</span>
+    </div>
+  
+  </div> -->
 </div>

@@ -6,16 +6,19 @@ import {
   HostListener,
 } from "@angular/core";
 
+import { homeTransition } from "../show-animation";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"],
+  animations: [homeTransition],
+  host: {
+    "[@homeTransition]": "",
+  },
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  defaultImage =
-    "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=760";
-  image =
-    "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=1050&w=1560";
+  defaultImage = "https://i.imgur.com/O9MZfwg.jpg";
+  image = "https://i.imgur.com/O9MZfwg.jpg";
 
   constructor() {}
 

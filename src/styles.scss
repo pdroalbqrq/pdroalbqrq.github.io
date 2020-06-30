@@ -1,10 +1,8 @@
 @import "./assets/scss/main.scss";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 html,
 body {
   height: 100%;
-  font-family: "Roboto", sans-serif;
 }
 body {
   margin: 0;
@@ -13,8 +11,9 @@ body {
 
 .main-outlet {
   height: 100%;
-  // margin-left: 50px;
   position: relative;
   z-index: 1;
-  overflow-y: hidden;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
