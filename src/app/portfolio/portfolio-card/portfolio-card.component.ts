@@ -6,6 +6,7 @@ import {
   HostListener,
   ChangeDetectorRef,
   Input,
+  NgZone,
 } from "@angular/core";
 import { AnimationEvent } from "@angular/animations";
 import { PortfolioHoverAnimations } from "./portfolio-card-animations";
