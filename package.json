@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve --o --port 4201",
     "build": "ng build --prod --base-href https://pdroalbqrq.github.io/",
-    "deploy": "ngh --branch=master",
+    "predeploy": "npm run build",
+    "deploy": "ngh --branch=master --dir=dist/curriculo",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

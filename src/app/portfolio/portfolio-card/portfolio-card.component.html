@@ -1,0 +1,17 @@
+<figure
+  #figure
+  class="portifolio-figure"
+  (mouseenter)="mouseEnterHandler($event)"
+  (mouseleave)="mouseLeaveHandler($event)"
+>
+  <div
+    class="overlay-title"
+    *ngIf="state"
+    [@hover]="state"
+    (@hover.done)="onDone($event)"
+  >
+    <span select="[overlay]">
+      {{ title }}
+    </span>
+  </div>
+</figure>

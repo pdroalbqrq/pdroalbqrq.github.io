@@ -15,7 +15,7 @@ export const homeTransition = trigger("homeTransition", [
       stagger(300, [
         style({ transform: "translateY(100px)" }),
         animate(
-          "1s cubic-bezier(.75,-0.48,.26,1.52)",
+          "0.7s cubic-bezier(.75,-0.48,.26,1.52)",
           style({ transform: "translateY(0px)", opacity: 1 })
         ),
       ])
@@ -27,7 +27,7 @@ export const homeTransition = trigger("homeTransition", [
       stagger(300, [
         style({ transform: "translateY(0px)", opacity: 1 }),
         animate(
-          "1s cubic-bezier(.75,-0.48,.26,1.52)",
+          "0.5s cubic-bezier(.75,-0.48,.26,1.52)",
           style({ transform: "translateY(100px)", opacity: 0 })
         ),
       ])

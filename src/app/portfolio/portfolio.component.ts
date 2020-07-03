@@ -11,6 +11,17 @@ import { homeTransition } from "../show-animation";
   },
 })
 export class PortfolioComponent implements OnInit {
+  titles: string[] = [
+    "dale",
+    "mlk",
+    "doido",
+    "pega",
+    "essa",
+    "animação",
+    "não sei",
+    "mais o que",
+    "colocar",
+  ];
   constructor() {}
 
   ngOnInit(): void {}

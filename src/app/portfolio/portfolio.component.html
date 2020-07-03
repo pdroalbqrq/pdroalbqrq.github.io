@@ -1,5 +1,18 @@
 <div class="background">
-  <h1 class="titulo block">
-    AQUI DEVERIA MOSTRAR TODOS OS PROJETOS QUE EU FIZ DE FORMA INTERESSANTE
-  </h1>
+  <div class="container">
+    <section class="title-session block">
+      <h1 class="title">MEU <span class="title">PORTIFÓLIO</span></h1>
+      <span class="title-bg">TRABALHOS</span>
+    </section>
+
+    <section class="portfolio">
+      <div class="portifolio__gallery">
+        <ul class="portifolio__list">
+          <li class="portifolio__card" *ngFor="let title of titles">
+            <app-portfolio-card [title]="title"></app-portfolio-card>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
 </div>

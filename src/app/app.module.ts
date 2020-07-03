@@ -14,6 +14,7 @@ import { SkillsComponent } from "./skills/skills.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { TeamComponent } from "./team/team.component";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { PortfolioCardComponent } from './portfolio/portfolio-card/portfolio-card.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -29,6 +30,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SkillsComponent,
     PortfolioComponent,
     TeamComponent,
+    PortfolioCardComponent,
   ],
   imports: [
     BrowserModule,
