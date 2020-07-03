@@ -60,10 +60,8 @@ export class PortfolioCardComponent implements OnInit {
       case rightEdgeDist:
         return (this.state = `${direction}-right`);
       case topEdgeDist:
-        console.log(min, topEdgeDist);
         return (this.state = `${direction}-top`);
       case bottomEdgeDist:
-        console.log(min, bottomEdgeDist);
         return (this.state = `${direction}-bottom`);
     }
   }
