@@ -6,8 +6,8 @@ import {
   transition,
 } from "@angular/animations";
 
-const animateIn = "0.15s ease-in";
-const animateOut = "0.25s ease-out";
+const animateIn = "0.3s ease";
+const animateOut = "0.3s ease";
 
 const styleIdle = { transform: "translate3d(0, 0, 0)" };
 const styleTop = { transform: "translate3d(0, -100%, 0)" };

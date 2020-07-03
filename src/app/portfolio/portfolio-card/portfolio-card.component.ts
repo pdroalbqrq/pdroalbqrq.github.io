@@ -32,53 +32,41 @@ export class PortfolioCardComponent implements OnInit {
   }
 
   effectEvent($event: MouseEvent) {
+    const elemBounding = this.figure.nativeElement.getBoundingClientRect();
+    const elementLeftEdge = elemBounding.left;
+    const elementTopEdge = elemBounding.top;
+    const elementRightEdge = elemBounding.right;
+    const elementBottomEdge = elemBounding.bottom;
+
+    const mouseX = $event.pageX;
+    const mouseY = $event.pageY;
+
+    const topEdgeDist = Math.abs(elementTopEdge - mouseY);
+    const bottomEdgeDist = Math.abs(elementBottomEdge - mouseY);
+    const leftEdgeDist = Math.abs(elementLeftEdge - mouseX);
+    const rightEdgeDist = Math.abs(elementRightEdge - mouseX);
+
+    const min = Math.min(
+      topEdgeDist,
+      bottomEdgeDist,
+      leftEdgeDist,
+      rightEdgeDist
+    );
+
     const direction = event.type === "mouseenter" ? "in" : "out";
-    const figOffSetX = this.figure.nativeElement.offsetWidth;
-    const figOffSetY = this.figure.nativeElement.offsetHeight;
-
-    if ($event.offsetY < 10 && $event.offsetY < $event.offsetX) {
-      this.state = `${direction}-right`;
-      // setTimeout(() => (this.state = null), 250);
-    }
-    if ($event.offsetX < 10 && $event.offsetX < $event.offsetY) {
-      this.state = `${direction}-left`;
-      // setTimeout(() => (this.state = null), 250);
-    }
-    if ($event.offsetY < 10 && $event.offsetY < $event.offsetX) {
-      this.state = `${direction}-top`;
-      // setTimeout(() => (this.state = null), 250);
-    }
-    if ($event.offsetX > figOffSetX - 10) {
-      this.state = `${direction}-right`;
-      // setTimeout(() => (this.state = null), 250);
-    }
-
-    if ($event.offsetY > figOffSetY - 10) {
-      this.state = `${direction}-bottom`;
+    switch (min) {
+      case leftEdgeDist:
+        return (this.state = `${direction}-left`);
+      case rightEdgeDist:
+        return (this.state = `${direction}-right`);
+      case topEdgeDist:
+        console.log(min, topEdgeDist);
+        return (this.state = `${direction}-top`);
+      case bottomEdgeDist:
+        console.log(min, bottomEdgeDist);
+        return (this.state = `${direction}-bottom`);
     }
   }
-
-  // @HostListener("mouseenter", ["$event"])
-  // @HostListener("mouseleave", ["$event"])
-  // onHover(event: MouseEvent) {
-  //   const direction = event.type === "mouseenter" ? "in" : "out";
-  //   // console.log(direction);
-  //   // const host = event.target as HTMLElement;
-  //   const host: HTMLElement = this.figure.nativeElement;
-  //   // console.log(host);
-  //   const w = host.offsetWidth;
-  //   const h = host.offsetHeight;
-  //   // console.log(w, h);
-
-  //   const x = (event.pageX - host.offsetLeft - w / 2) * (w > h ? h / w : 1);
-  //   const y = (event.pageY - host.offsetTop - h / 2) * (h > w ? w / h : 1);
-  //   console.log(x, y);
-  //   const states = ["top", "right", "bottom", "left"];
-  //   const side =
-  //     Math.round((Math.atan2(y, x) * (180 / Math.PI) + 180) / 90 + 3) % 4;
-  //   console.log(side);
-  //   this.state = `${direction}-${states[side]}`;
-  // }
 
   onDone(event: AnimationEvent) {
     this.state = event.toState.startsWith("out-") ? null : this.state;
