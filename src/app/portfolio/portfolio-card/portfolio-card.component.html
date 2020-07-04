@@ -6,6 +6,10 @@
   [defaultImage]="works.lowImg"
   [lazyLoad]="works.img"
 >
+  <mat-progress-spinner
+    *ngIf="!works.img"
+    [mode]="'indeterminate'"
+  ></mat-progress-spinner>
   <div
     class="overlay-title"
     *ngIf="state"

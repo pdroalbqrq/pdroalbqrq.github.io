@@ -14,7 +14,9 @@ import { SkillsComponent } from "./skills/skills.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { TeamComponent } from "./team/team.component";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
-import { PortfolioCardComponent } from './portfolio/portfolio-card/portfolio-card.component';
+import { PortfolioCardComponent } from "./portfolio/portfolio-card/portfolio-card.component";
+import { LazyLoadImageModule } from "ng-lazyload-image";
+import { PortfolioGalleryComponent } from './portfolio/portfolio-gallery/portfolio-gallery.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -31,12 +33,14 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PortfolioComponent,
     TeamComponent,
     PortfolioCardComponent,
+    PortfolioGalleryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     PerfectScrollbarModule,
+    LazyLoadImageModule,
     MatProgressSpinnerModule,
   ],
   providers: [

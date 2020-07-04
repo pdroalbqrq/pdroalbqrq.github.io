@@ -1,5 +1,5 @@
 <div class="background">
-  <div class="my-image block">
+  <div [defaultImage]="defaultImage" [lazyLoad]="image" class="my-image block">
     <div class="home__social-medias">
       <div>
         <svg
@@ -88,7 +88,7 @@
     </div>
   </div>
   <div class="text block">
-    <div>
+    <div class="text-container">
       <h6>
         OLÁ !
       </h6>
@@ -105,13 +105,4 @@
       </button>
     </div>
   </div>
-  <!-- <div class="home">
-    <h1 class="title">
-      PEDRO CHIAPPETTA
-    </h1>
-    <div class="subtitle">
-      DESENVOLVEDOR <span> FRONT-END</span> && <span>BACK-END</span>
-    </div>
-  
-  </div> -->
 </div>

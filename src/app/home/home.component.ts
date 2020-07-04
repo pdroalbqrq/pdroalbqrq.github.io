@@ -17,6 +17,11 @@ import { homeTransition } from "../show-animation";
   },
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  defaultImage =
+    "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/pedrohomelowquality.jpg";
+  image =
+    "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/pedrohome.jpg";
+
   constructor() {}
 
   @HostListener("window:scroll", [])

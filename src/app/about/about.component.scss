@@ -36,14 +36,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
     & > div {
-      // flex: 0 0 50%;
       max-width: 50%;
       position: relative;
-      // width: 100%;
-      // padding-right: 15px;
-      // padding-left: 15px;
-      margin: 10px;
+      flex: 0 0 50%;
+      padding: 10px;
+      box-sizing: border-box;
     }
   }
 }
