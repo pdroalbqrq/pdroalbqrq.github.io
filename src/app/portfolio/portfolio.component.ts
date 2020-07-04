@@ -11,16 +11,70 @@ import { homeTransition } from "../show-animation";
   },
 })
 export class PortfolioComponent implements OnInit {
-  titles: string[] = [
-    "dale",
-    "mlk",
-    "doido",
-    "pega",
-    "essa",
-    "animação",
-    "não sei",
-    "mais o que",
-    "colocar",
+  titles: any[] = [
+    {
+      img:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
+      lowImg:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
+      title: "Nomad Work",
+    },
+    {
+      img:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
+      lowImg:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
+      title: "dale",
+    },
+    {
+      img:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
+      lowImg:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
+      title: "mlk",
+    },
+    {
+      img:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
+      lowImg:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
+      title: "doido",
+    },
+    {
+      img:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
+      lowImg:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
+      title: "pega",
+    },
+    {
+      img:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
+      lowImg:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
+      title: "essa",
+    },
+    {
+      img:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
+      lowImg:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
+      title: "animação",
+    },
+    {
+      img:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
+      lowImg:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
+      title: "não sei",
+    },
+    {
+      img:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
+      lowImg:
+        "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
+      title: "mais",
+    },
   ];
   constructor() {}
 

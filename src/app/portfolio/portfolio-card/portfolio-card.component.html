@@ -3,6 +3,8 @@
   class="portifolio-figure"
   (mouseenter)="mouseEnterHandler($event)"
   (mouseleave)="mouseLeaveHandler($event)"
+  [defaultImage]="works.lowImg"
+  [lazyLoad]="works.img"
 >
   <div
     class="overlay-title"
@@ -11,7 +13,7 @@
     (@hover.done)="onDone($event)"
   >
     <span select="[overlay]">
-      {{ title }}
+      {{ works.title }}
     </span>
   </div>
 </figure>

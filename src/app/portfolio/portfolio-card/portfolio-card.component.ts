@@ -18,7 +18,7 @@ import { PortfolioHoverAnimations } from "./portfolio-card-animations";
   animations: PortfolioHoverAnimations,
 })
 export class PortfolioCardComponent implements OnInit {
-  @Input() title: string;
+  @Input() works: any;
   state;
   ngOnInit(): void {}
   @ViewChild("figure", { static: true }) figure: ElementRef;
