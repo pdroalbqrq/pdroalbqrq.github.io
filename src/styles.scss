@@ -5,12 +5,21 @@ html,
 body {
   height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 .main-outlet {
   position: relative;
   width: 100%;
   height: 100%;
+  transition: 0.5s ease;
+}
+
+.open-menu {
+  transform: translate(-100%, 0);
+}
+.close-menu {
+  transform: translate(0%, 0);
 }
 
 .graph__spinner.mat-progress-spinner {
@@ -23,11 +32,34 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+  .header-box__title {
+    .title-session {
+      .title {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-  h1 {
-    font-size: 35px;
+  .main-outlet {
+    // margin-top: 64px;
+  }
+  .container {
+    .title-session {
+      .title {
+        display: none;
+        font-size: 2.5rem;
+      }
+      .title-bg {
+        display: none;
+      }
+    }
+  }
+  .title-session {
+    .title {
+      font-size: 2.5rem;
+    }
   }
 }
 

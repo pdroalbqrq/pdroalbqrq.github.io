@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { homeTransition } from "../show-animation";
+import { ChangeTitleService } from "../shared/services/change-title.service";
 @Component({
   selector: "app-about",
   templateUrl: "./about.component.html",
@@ -143,7 +144,9 @@ export class AboutComponent implements OnInit {
         "O curso de Análise e Desenvolvimento de Sistemas forma profissionais capazes de desenvolver, analisar, projetar, implementar e atualizar sistemas de informação para diversos setores de atividades.",
     },
   ];
-  constructor() {}
+  constructor(private titleService: ChangeTitleService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.titleService.changeTitle("sobre mim");
+  }
 }

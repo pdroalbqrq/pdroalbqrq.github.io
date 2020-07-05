@@ -1,5 +1,5 @@
 .background {
-  height: 100vh;
+  height: calc(100vh - 100px);
   align-items: center;
   background: linear-gradient(
     75deg,
@@ -124,10 +124,11 @@
 
 @media (max-width: 768px) {
   .background {
+    padding: 20px 0;
     .my-image.block {
       border-radius: 50%;
-      height: 200px;
-      width: 200px;
+      height: 150px;
+      width: 150px;
     }
   }
   .text {
@@ -140,6 +141,9 @@
     flex-direction: column;
     justify-content: space-around;
     background: white;
+    .home__social-medias {
+      display: none;
+    }
     .my-image {
       flex: none;
       border-radius: 50%;

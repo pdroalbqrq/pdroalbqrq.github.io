@@ -35,7 +35,8 @@ const routes: Routes = [
       },
       {
         path: "portfolio",
-        component: PortfolioComponent,
+        loadChildren: () =>
+          import("./portfolio/portfolio.module").then((m) => m.PortfolioModule),
         data: { routeIdx: 3, state: "portfolio" },
       },
       {

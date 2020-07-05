@@ -1,22 +1,20 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {
+  PerfectScrollbarConfigInterface,
+  PerfectScrollbarModule,
+  PERFECT_SCROLLBAR_CONFIG,
+} from "ngx-perfect-scrollbar";
 import { AppRoutingModule } from "./app-routing.module";
-import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
-import { PERFECT_SCROLLBAR_CONFIG } from "ngx-perfect-scrollbar";
-import { PerfectScrollbarConfigInterface } from "ngx-perfect-scrollbar";
-
 import { AppComponent } from "./app.component";
+import { SideMenuDirective } from "./directives/side-menu.directive";
 import { HeaderComponent } from "./header/header.component";
 import { HomeComponent } from "./home/home.component";
 import { AppLayoutComponent } from "./layout.component";
+import { SharedModule } from "./shared/shared.module";
 import { SkillsComponent } from "./skills/skills.component";
-import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { TeamComponent } from "./team/team.component";
-import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
-import { PortfolioCardComponent } from "./portfolio/portfolio-card/portfolio-card.component";
-import { LazyLoadImageModule } from "ng-lazyload-image";
-import { PortfolioGalleryComponent } from './portfolio/portfolio-gallery/portfolio-gallery.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -30,18 +28,15 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HomeComponent,
     AppLayoutComponent,
     SkillsComponent,
-    PortfolioComponent,
     TeamComponent,
-    PortfolioCardComponent,
-    PortfolioGalleryComponent,
+    SideMenuDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     PerfectScrollbarModule,
-    LazyLoadImageModule,
-    MatProgressSpinnerModule,
+    SharedModule,
   ],
   providers: [
     {

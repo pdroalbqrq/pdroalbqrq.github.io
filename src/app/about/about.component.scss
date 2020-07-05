@@ -76,6 +76,50 @@
   }
   .experience__divisor {
     display: flex;
+    & > div {
+      flex: 0 0 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .my-skills {
+    .experience__divisor {
+      display: inline-block;
+      padding-bottom: 50px;
+      // & > div {
+      //   flex: 0 0 100%;
+      // }
+    }
+  }
+  .personal-info {
+    .personal-info__right {
+      & > div {
+        max-width: 100%;
+        padding: 10px;
+        flex: 0 0 100%;
+      }
+    }
+  }
+  .list {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .my-skills {
+    .my-skills__graphs {
+      & > div {
+        flex: 0 0 50%;
+        margin: 40px 0px;
+      }
+    }
+  }
+  .personal-info {
+    margin-top: 0;
+    .personal-info__left {
+      min-width: unset;
+    }
   }
 }
 

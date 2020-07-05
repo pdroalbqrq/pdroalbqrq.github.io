@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { homeTransition } from "../show-animation";
+import { ChangeTitleService } from "../shared/services/change-title.service";
 
 @Component({
   selector: "app-portfolio",
@@ -76,7 +77,9 @@ export class PortfolioComponent implements OnInit {
       title: "mais",
     },
   ];
-  constructor() {}
+  constructor(private titleService: ChangeTitleService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.titleService.changeTitle("portfolio");
+  }
 }

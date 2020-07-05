@@ -5,8 +5,10 @@ import { slide } from "./router-animations";
 @Component({
   selector: "app-app-main",
   template: `
-    <app-header></app-header>
+    <app-header (openclose)="openclose($event)"></app-header>
     <perfect-scrollbar
+      appSideMenu
+      [isOpen]="isOpen"
       [@routeAnimations]="prepareRoute(outlet)"
       class="main-outlet"
     >
@@ -17,6 +19,7 @@ import { slide } from "./router-animations";
 })
 export class AppLayoutComponent {
   animationState: number;
+  isOpen = false;
 
   prepareRoute(outlet: RouterOutlet) {
     return (
@@ -24,5 +27,9 @@ export class AppLayoutComponent {
       outlet.activatedRouteData &&
       outlet.activatedRouteData["routeIdx"]
     );
+  }
+
+  openclose(event) {
+    this.isOpen = !this.isOpen;
   }
 }

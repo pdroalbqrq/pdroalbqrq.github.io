@@ -1,4 +1,4 @@
-<figure
+<div
   #figure
   class="portifolio-figure"
   (mouseenter)="mouseEnterHandler($event)"
@@ -6,10 +6,6 @@
   [defaultImage]="works.lowImg"
   [lazyLoad]="works.img"
 >
-  <mat-progress-spinner
-    *ngIf="!works.img"
-    [mode]="'indeterminate'"
-  ></mat-progress-spinner>
   <div
     class="overlay-title"
     *ngIf="state"
@@ -20,4 +16,4 @@
       {{ works.title }}
     </span>
   </div>
-</figure>
+</div>
