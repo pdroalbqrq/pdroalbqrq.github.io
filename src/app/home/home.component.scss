@@ -1,5 +1,4 @@
 .background {
-  height: calc(100vh - 100px);
   align-items: center;
   background: linear-gradient(
     75deg,
@@ -121,14 +120,19 @@
     display: none;
   }
 }
+@media (max-width: 480px) {
+  .background {
+    padding-bottom: 100px;
+  }
+}
 
 @media (max-width: 768px) {
   .background {
-    padding: 20px 0;
+    // padding: 20px 0;
     .my-image.block {
       border-radius: 50%;
-      height: 150px;
-      width: 150px;
+      height: 200px;
+      width: 200px;
     }
   }
   .text {
@@ -157,10 +161,11 @@
     }
   }
 }
+
 @media (max-width: 1200px) {
   .my-image {
     flex: 0 0 40%;
-    width: 40%;
+    // width: 40%;
   }
 
   .text-container {
