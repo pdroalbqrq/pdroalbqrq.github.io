@@ -1,25 +1,30 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { slide } from "./router-animations";
-
+import Scrollbar from "smooth-scrollbar";
 @Component({
   selector: "app-app-main",
   template: `
     <app-header (openclose)="openclose($event)"></app-header>
-    <perfect-scrollbar
+    <div
       appSideMenu
       [isOpen]="isOpen"
       [@routeAnimations]="prepareRoute(outlet)"
       class="main-outlet"
+      id="mainoutlet"
     >
       <router-outlet #outlet="outlet"></router-outlet>
-    </perfect-scrollbar>
+    </div>
   `,
   animations: [slide],
 })
-export class AppLayoutComponent {
+export class AppLayoutComponent implements OnInit {
   animationState: number;
   isOpen = false;
+  scroll: any;
+  ngOnInit(): void {
+    this.scroll = Scrollbar.init(document.querySelector("#mainoutlet"));
+  }
 
   prepareRoute(outlet: RouterOutlet) {
     return (
