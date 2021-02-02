@@ -1,0 +1,33 @@
+.snackbar {
+  padding: 10px 15px;
+  border-radius: 2px;
+  border: 2px solid var(--primary-color);
+  background: var(--secondary-color);
+  box-shadow: -1px 2px 5px rgba(29, 29, 29, 0.61);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateX(0px);
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  &__desc {
+    font-size: 18px;
+    color: var(--primary-color);
+  }
+}
+
+.main-button {
+  margin: 0 0 0 20px;
+  padding: 0px 20px;
+  border: 0px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+  span {
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    color: var(--secondary-color);
+  }
+}
