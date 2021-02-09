@@ -140,13 +140,14 @@
       .list-item {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding: 20px 0px;
         margin: 0 10px;
         span {
           color: var(--font-color);
           font-size: 2rem;
           min-width: 200px;
+          padding: 0 10px;
         }
         svg {
           width: 3rem;

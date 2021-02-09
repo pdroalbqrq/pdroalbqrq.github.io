@@ -23,7 +23,7 @@ export class AppLayoutComponent implements OnInit {
   isOpen = false;
   scroll: any;
   ngOnInit(): void {
-    this.scroll = Scrollbar.init(document.querySelector("#mainoutlet"));
+    // this.scroll = Scrollbar.init(document.querySelector("#mainoutlet"));
   }
 
   prepareRoute(outlet: RouterOutlet) {

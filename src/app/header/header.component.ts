@@ -1,19 +1,15 @@
 import {
   Component,
-  Output,
-  EventEmitter,
-  ViewChild,
   ElementRef,
+  EventEmitter,
   OnInit,
+  Output,
+  ViewChild,
 } from "@angular/core";
-import {
-  Router,
-  ActivatedRoute,
-  ActivationEnd,
-  NavigationStart,
-  NavigationEnd,
-} from "@angular/router";
+import { NavigationStart, Router, RouterEvent } from "@angular/router";
 import { ChangeTitleService } from "../shared/services/change-title.service";
+import { filter, map } from "rxjs/operators";
+import Scrollbar from "smooth-scrollbar";
 
 @Component({
   selector: "app-header",
@@ -34,6 +30,18 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.router.events
+      .pipe(
+        filter((e: any): e is RouterEvent => e instanceof RouterEvent),
+        map((data) => {
+          if (data instanceof NavigationStart) {
+            window.scrollTo(0,0);
+          }
+
+          return data;
+        })
+      )
+      .subscribe();
     this.menuList.nativeElement.style.width = "0px";
     this.titleService
       .getTitle()
