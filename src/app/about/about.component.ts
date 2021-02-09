@@ -45,7 +45,7 @@ export class AboutComponent implements OnInit {
     },
     {
       key: "Telefone",
-      value: "+55 9 9880 2269",
+      value: "+55 81 9 9880 2269",
     },
     {
       key: "Idiomas",
@@ -78,7 +78,7 @@ export class AboutComponent implements OnInit {
       icon: "fab fa-html5",
     },
     {
-      value: 89,
+      value: 90,
       name: "javascript",
       icon: "fab fa-js",
     },
@@ -103,12 +103,12 @@ export class AboutComponent implements OnInit {
       icon: "fab fa-node-js",
     },
     {
-      value: 70,
+      value: 60,
       name: "mysql",
       icon: "fas fa-database",
     },
     {
-      value: 40,
+      value: 60,
       name: "react",
       icon: "fab fa-react",
     },

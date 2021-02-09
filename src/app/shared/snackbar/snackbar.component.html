@@ -1,0 +1,7 @@
+<div [@modalSlideInOut] class="snackbar" *ngIf="showSnack$ | async as snack">
+  <span class="snackbar__desc">{{ snack.desc }}</span>
+
+  <button class="main-button" (click)="close()">
+    <span> Entendido </span>
+  </button>
+</div>

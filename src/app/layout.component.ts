@@ -15,6 +15,7 @@ import Scrollbar from "smooth-scrollbar";
     >
       <router-outlet #outlet="outlet"></router-outlet>
     </div>
+    <app-snackbar></app-snackbar>
   `,
   animations: [slide],
 })

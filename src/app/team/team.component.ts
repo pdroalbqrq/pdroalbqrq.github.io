@@ -1,6 +1,13 @@
-import { Component, OnInit } from "@angular/core";
+import {
+  AfterViewChecked,
+  AfterViewInit,
+  Component,
+  OnDestroy,
+  OnInit,
+} from "@angular/core";
 import { homeTransition } from "../show-animation";
 import { ChangeTitleService } from "../shared/services/change-title.service";
+import { SnackbarService } from "../shared/services/snackbar.service";
 
 @Component({
   selector: "app-team",
@@ -11,10 +18,18 @@ import { ChangeTitleService } from "../shared/services/change-title.service";
     "[@homeTransition]": "",
   },
 })
-export class TeamComponent implements OnInit {
-  constructor(private titleService: ChangeTitleService) {}
+export class TeamComponent implements OnInit, OnDestroy {
+  constructor(
+    private titleService: ChangeTitleService,
+    private snackBar: SnackbarService
+  ) {}
 
   ngOnInit(): void {
+    this.snackBar.open("Área em desenvolvimento");
     this.titleService.changeTitle("equipe");
+  }
+
+  ngOnDestroy(): void {
+    this.snackBar.close();
   }
 }

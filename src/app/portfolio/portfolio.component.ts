@@ -1,6 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { homeTransition } from "../show-animation";
 import { ChangeTitleService } from "../shared/services/change-title.service";
+import { SnackbarService } from "../shared/services/snackbar.service";
 
 @Component({
   selector: "app-portfolio",
@@ -11,7 +12,7 @@ import { ChangeTitleService } from "../shared/services/change-title.service";
     "[@homeTransition]": "",
   },
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, OnDestroy {
   titles: any[] = [
     {
       img:
@@ -25,61 +26,69 @@ export class PortfolioComponent implements OnInit {
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
       lowImg:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
-      title: "dale",
+      title: "Nomad Work",
     },
     {
       img:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
       lowImg:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
-      title: "mlk",
+      title: "Nomad Work",
     },
     {
       img:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
       lowImg:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
-      title: "doido",
+      title: "Nomad Work",
     },
     {
       img:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
       lowImg:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
-      title: "pega",
+      title: "Nomad Work",
     },
     {
       img:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
       lowImg:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
-      title: "essa",
+      title: "Nomad Work",
     },
     {
       img:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
       lowImg:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
-      title: "animação",
+      title: "Nomad Work",
     },
     {
       img:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
       lowImg:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
-      title: "não sei",
+      title: "Nomad Work",
     },
     {
       img:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadwork.jpg",
       lowImg:
         "https://s3-sa-east-1.amazonaws.com/pdroalbqrq.github.io/homenomadworklowquality.jpg",
-      title: "mais",
+      title: "Nomad Work",
     },
   ];
-  constructor(private titleService: ChangeTitleService) {}
+  constructor(
+    private titleService: ChangeTitleService,
+    private snackBar: SnackbarService
+  ) {}
 
   ngOnInit(): void {
+    this.snackBar.open("Área em desenvolvimento");
     this.titleService.changeTitle("portfolio");
+  }
+
+  ngOnDestroy(): void {
+    this.snackBar.close();
   }
 }
