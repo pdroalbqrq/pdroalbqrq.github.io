@@ -1,6 +1,7 @@
 {
-  "/xnqggzaj": {
-    "target": "https://formspree.io",
-    "secure": false
+  "/api": {
+    "target": "http://localhost:8080",
+    "secure": false,
+    "changeOrigin": true
   }
 }

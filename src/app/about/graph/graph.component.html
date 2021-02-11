@@ -12,11 +12,11 @@
     class="graph__spinner"
     [diameter]="150"
     [mode]="'determinate'"
-    [value]="skill.value"
+    [value]="skill.percentage"
   >
   </mat-progress-spinner>
   <span class="graph__span label"
-    >{{ skill.value }}<span class="smaller">%</span></span
+    >{{ skill.percentage }}<span class="smaller">%</span></span
   >
   <span class="graph__title">
     {{ skill.name }}

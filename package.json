@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --o  --port 4201",
+    "start": "ng serve --proxy-config proxy.conf.json --o --port 4201",
     "prebuild": "rimraf dist",
     "build": "ng build --prod --base-href https://pdroalbqrq.github.io/",
     "predeploy": "npm run build",

@@ -6,21 +6,13 @@
     </section>
     <div class="block">
       <section class="personal-info">
-        <div class="personal-info__left">
+        <div class="personal-info__left" *ngIf="aboutMeFirst">
           <h2 class="personal-info__title">INFORMAÇÕES PESSOAIS</h2>
           <div class="list">
             <ul class="personal-info__list">
-              <li *ngFor="let columnOne of aboutMeFirst">
+              <li *ngFor="let firstCol of aboutMeFirst | keyvalue: originalOrder ">
                 <p class="list-title">
-                  {{ columnOne.key }} : <span>{{ columnOne.value }}</span>
-                </p>
-              </li>
-            </ul>
-
-            <ul class="personal-info__list">
-              <li *ngFor="let columnTwo of aboutMeSecond">
-                <p class="list-title">
-                  {{ columnTwo.key }} : <span>{{ columnTwo.value }}</span>
+                  {{ firstCol.key }} : <span>{{ firstCol.value }}</span>
                 </p>
               </li>
             </ul>
@@ -50,18 +42,10 @@
         </h1>
         <div class="experience__divisor">
           <div>
-            <app-experience
-              *ngFor="let eJ of experienceJob"
-              [isJob]="true"
-              [experience]="eJ"
-            ></app-experience>
+            <app-experience *ngFor="let eJ of experienceJob" [experience]="eJ"></app-experience>
           </div>
           <div>
-            <app-experience
-              *ngFor="let eJ of experienceStudy"
-              [isJob]="false"
-              [experience]="eJ"
-            ></app-experience>
+            <app-experience *ngFor="let eJ of experienceStudy" [experience]="eJ"></app-experience>
           </div>
         </div>
       </section>

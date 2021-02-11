@@ -1,7 +1,12 @@
+import { UserHtml, UserService } from "./dto/user.dto";
+import { TemplateService } from "./../shared/services/template.service";
 import { Component, OnInit } from "@angular/core";
 
 import { homeTransition } from "../show-animation";
 import { ChangeTitleService } from "../shared/services/change-title.service";
+import { KeyValue } from "@angular/common";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
 @Component({
   selector: "app-about",
   templateUrl: "./about.component.html",
@@ -12,141 +17,54 @@ import { ChangeTitleService } from "../shared/services/change-title.service";
   },
 })
 export class AboutComponent implements OnInit {
-  aboutMeFirst = [
-    {
-      key: "Nome",
-      value: "Pedro",
-    },
-    {
-      key: "Sobrenome",
-      value: "Albuquerque",
-    },
-    {
-      key: "E-mail",
-      value: "pdroalbqrq@gmail.com",
-    },
-    {
-      key: "Idade",
-      value: "22 anos",
-    },
-    {
-      key: "Nacionalidade",
-      value: "brasileiro",
-    },
-  ];
-  aboutMeSecond = [
-    {
-      key: "Freelance",
-      value: "Disponível",
-    },
-    {
-      key: "Endereço",
-      value: "Olinda",
-    },
-    {
-      key: "Telefone",
-      value: "+55 81 9 9880 2269",
-    },
-    {
-      key: "Idiomas",
-      value: "Português, Inglês",
-    },
-  ];
-  infos = [
-    {
-      value: 3,
-      description: "ANOS DE EXPERIÊNCIA",
-    },
-    {
-      value: 10,
-      description: "PROJETOS FINALIZADOS",
-    },
-    {
-      value: "??",
-      description: "CLIENTES SATISFEITOS",
-    },
-    {
-      value: 3,
-      description: "ANOS DE FACULDADE",
-    },
-  ];
+  private _aboutMeFirst: { [key: string]: any } = null;
+  private _infos;
+  private _skills;
+  private _experienceJob;
+  private _experienceStudy;
 
-  skills = [
-    {
-      value: 95,
-      name: "html",
-      icon: "fab fa-html5",
-    },
-    {
-      value: 90,
-      name: "javascript",
-      icon: "fab fa-js",
-    },
-    {
-      value: 80,
-      name: "typescript",
-      icon: "fab fa-js",
-    },
-    {
-      value: 95,
-      name: "css",
-      icon: "fab fa-css3-alt",
-    },
-    {
-      value: 95,
-      name: "angular",
-      icon: "fab fa-angular",
-    },
-    {
-      value: 80,
-      name: "nodejs",
-      icon: "fab fa-node-js",
-    },
-    {
-      value: 60,
-      name: "mysql",
-      icon: "fas fa-database",
-    },
-    {
-      value: 60,
-      name: "react",
-      icon: "fab fa-react",
-    },
-  ];
+  get aboutMeFirst(): { [key: string]: any } {
+    return this._aboutMeFirst;
+  }
 
-  experienceJob = [
-    {
-      date: "2019 - atualmente",
-      job: "web developer",
-      company: "AVANADE",
-      description: "Desenvolvedor web front-end com Angular 8/9",
-    },
-    {
-      date: "2019 - 2019",
-      job: "web developer",
-      company: "Berlim Digital",
-      description:
-        "Desenvolvedor web (front-end/back-end) com Javascript Vanilla, PhP/WordPress",
-    },
-    {
-      date: "2017 - 2019",
-      job: "Front End developer",
-      company: "Nomad Work",
-      description: "Desenvolvedor web front-end com Angular 6",
-    },
-  ];
-  experienceStudy = [
-    {
-      date: "2017 - 2019",
-      job: "ADS",
-      company: "UNIBRATEC",
-      description:
-        "O curso de Análise e Desenvolvimento de Sistemas forma profissionais capazes de desenvolver, analisar, projetar, implementar e atualizar sistemas de informação para diversos setores de atividades.",
-    },
-  ];
-  constructor(private titleService: ChangeTitleService) {}
+  get infos(): any {
+    return this._infos;
+  }
+
+  get skills(): any {
+    return this._skills;
+  }
+
+  get experienceJob(): any {
+    return this._experienceJob;
+  }
+
+  get experienceStudy(): any {
+    return this._experienceStudy;
+  }
+
+  constructor(
+    private titleService: ChangeTitleService,
+    private templateService: TemplateService
+  ) {}
 
   ngOnInit(): void {
     this.titleService.changeTitle("sobre mim");
+    this.templateService.getUserData().subscribe((data: any) => {
+      this._aboutMeFirst = new UserHtml(data);
+      this._infos = data.infos;
+      this._skills = data.skills.sort((n1, n2) =>
+        n2.percentage.localeCompare(n1.percentage)
+      );
+      this._experienceJob = data.exps.filter((data) => data.type == 1);
+      this._experienceStudy = data.exps.filter((data) => data.type == 2);
+    });
   }
+
+  originalOrder = (
+    a: KeyValue<number, string>,
+    b: KeyValue<number, string>
+  ): number => {
+    return 0;
+  };
 }

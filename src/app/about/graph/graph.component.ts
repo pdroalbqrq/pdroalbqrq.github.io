@@ -1,13 +1,11 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: "app-graph",
   templateUrl: "./graph.component.html",
   styleUrls: ["./graph.component.scss"],
 })
-export class GraphComponent implements OnInit {
+export class GraphComponent {
   @Input() skill;
   constructor() {}
-
-  ngOnInit(): void {}
 }

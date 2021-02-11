@@ -12,10 +12,27 @@
       font-size: 1.6rem;
       color: var(--font-color);
     }
+    .list_loading {
+      height: 100%;
+      width: 100%;
+      background: gray;
+    }
     .list {
       display: flex;
 
       .personal-info__list {
+        -webkit-column-count: 2; /* Chrome/Opera, Safari */
+        -moz-column-count: 2; /* Mozilla Firefox */
+        column-count: 2;
+
+        /* Properties below are optional: */
+        -webkit-column-gap: 50px; /* Chrome/Opera, Safari */
+        -moz-column-gap: 50px; /* Mozilla Firefox */
+        column-gap: 50px;
+
+        -webkit-column-rule: 1px single grey; /* Chrome/Opera, Safari */
+        -moz-column-rule: 1px single grey; /* Mozilla Firefox */
+        column-rule: 1px single grey;
         margin: 0 50px 0 0;
         li {
           margin: 0 0 20px 0;
@@ -76,6 +93,8 @@
   }
   .experience__divisor {
     display: flex;
+    align-items: flex-start;
+    justify-content: baseline;
     & > div {
       flex: 0 0 50%;
     }
